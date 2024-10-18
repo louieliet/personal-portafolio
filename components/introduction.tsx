@@ -5,8 +5,9 @@ import { TypeAnimation } from 'react-type-animation';
 const Introduction = () => {
 
     return (
-        <div className='flex items-center justify-center min-h-screen w-full gap-40'>
-            <div className='w-[400px] h-[400px] rounded-full overflow-hidden z-40'>
+        <div className='flex flex-col md:flex-row items-center justify-center min-h-screen w-full md:gap-20 gap-10 px-5'>
+            {/* Imagen circular, ajustada para pantallas pequeñas y grandes */}
+            <div className='w-[250px] h-[250px] md:w-[400px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden z-40'>
                 <Image 
                     src="/pp.png" 
                     priority 
@@ -17,8 +18,8 @@ const Introduction = () => {
                 />
             </div>
 
-            <div className='text-center w-[600px] mb-5'>
-                <h1 className='text-4xl py-10 md:py-1' >
+            <div className='text-center md:w-[600px] w-full mb-5'>
+                <h1 className='text-3xl md:text-4xl py-5 md:py-10'>
                     <TypeAnimation
                         sequence={[
                             'Hello, I am Emiliano',
@@ -37,13 +38,12 @@ const Introduction = () => {
                     />
                 </h1>
 
-                <p className='text-xl text-white'>
+                <p className='text-base md:text-xl text-white'>
                     ¡Hola! Soy estudiante de Ingeniería en Animación y Videojuegos en la Universidad Panamericana. 
                     Me gusta mucho la programación y el diseño. Me caracterizo por ser una persona con ganas de aprender, organizada, con capacidad de trabajar en equipo y bajo presión. 
                     Mi objetivo es formar parte de una empresa competitiva, en la cual pueda desarrollarme como programador y/o diseñador con experiencia sólida.
                 </p>
             </div>
-            
         </div>
     )
 }
