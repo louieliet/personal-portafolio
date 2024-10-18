@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 
-const Introduction = () => {
+const AboutMe = () => {
 
     return (
         <div className='flex flex-col md:flex-row items-center justify-center min-h-screen w-full md:gap-20 gap-10 px-5'>
@@ -48,4 +48,4 @@ const Introduction = () => {
     )
 }
 
-export default Introduction;
+export default AboutMe;

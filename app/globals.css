@@ -7,6 +7,13 @@ main{
   height: 100dvh;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #171717;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
