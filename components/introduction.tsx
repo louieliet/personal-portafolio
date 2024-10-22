@@ -34,11 +34,11 @@ const Introduction = () => {
                         wrapper='span'
                         speed={50}
                         repeat={Infinity}
-                        className='font-bold text-white'
+                        className='font-extrabold text-white'
                     />
                 </h1>
 
-                <p className='text-center md:text-left text-base md:text-xl text-white '>
+                <p className='text-center md:text-left text-base md:text-xl text-white font-semibold'>
                     ¡Hola! Soy estudiante de Ingeniería en Animación y Videojuegos en la Universidad Panamericana. 
                     Me gusta mucho la programación y el diseño. Me caracterizo por ser una persona con ganas de aprender, organizada, con capacidad de trabajar en equipo y bajo presión. 
                     Mi objetivo es formar parte de una empresa competitiva, en la cual pueda desarrollarme como programador y/o diseñador con experiencia sólida.
