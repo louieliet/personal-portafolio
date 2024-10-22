@@ -11,9 +11,6 @@ const config: Config = {
       colors: {
         "bg-secondary": "#171717",
       },
-      backgroundImage: {
-        "gradient-cover": "#171717",
-      }
     },
   },
   plugins: [],

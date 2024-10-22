@@ -1,21 +1,43 @@
-
+"use client";
+import { useEffect, useRef } from "react";
 import CoverParticles from "@/components/cover-particles";
 import Introduction from "@/components/introduction";
 import TimeLine from "@/components/timeline";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const mainRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (mainRef.current) {
+      // GSAP animations
+      gsap.from(".section", {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".section",
+          start: "top 80%", // Animation triggers when top of the section reaches 80% of the viewport
+          toggleActions: "play none none none",
+        },
+      });
+    }
+  }, []);
+
   return (
-    <main className="snap-y snap-mandatory h-screen overflow-y-scroll">
-      <CoverParticles />
-      <div className="bg-gradient-to-b from-gray-800 to-black snap-start">
+    <main className="h-screen">      
+      <section className="section bg-[#3a3a3a] h-screen snap-start flex justify-center items-center text-center">
         <Introduction />
-      </div>
-      <div className="bg-gradient-to-b from-black to-gray-900 snap-start py-auto">
-        <h1 className="mb-1 text-3xl font-bold sm:mb-0 text-white w-full text-center">
-          Experiencia
-        </h1>
+      </section>
+      
+      <section className="section bg-[#2b2b2b] h-screen snap-start text-white text-center p-10">
+        <h1 className="text-6xl font-bold mb-10">Mi experiencia</h1>
         <TimeLine />
-      </div>
+      </section>
     </main>
   );
 }
