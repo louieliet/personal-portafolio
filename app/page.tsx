@@ -1,6 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
-import CoverParticles from "@/components/cover-particles";
+import { useEffect } from "react";
 import Introduction from "@/components/introduction";
 import TimeLine from "@/components/timeline";
 import { gsap } from "gsap";
@@ -10,31 +9,35 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const mainRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    if (mainRef.current) {
-      // GSAP animations
-      gsap.from(".section", {
-        opacity: 0,
-        y: 50,
-        duration: 1,
+    // GSAP ScrollTrigger animation between sections
+    gsap.fromTo(
+      ".timeline-section",
+      { opacity: 0, y: 100 }, // Start values
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1.5, 
+        ease: "power3.out", 
         scrollTrigger: {
-          trigger: ".section",
-          start: "top 80%", // Animation triggers when top of the section reaches 80% of the viewport
-          toggleActions: "play none none none",
+          trigger: ".timeline-section", // Element that triggers the animation
+          start: "top 80%", // Start when the top of the timeline section hits 80% of the viewport
+          end: "bottom 20%", // When to end the animation
+          scrub: true, // Smooth animation progress as the user scrolls
         },
-      });
-    }
+      }
+    );
   }, []);
 
   return (
-    <main className="h-screen">      
-      <section className="section bg-[#3a3a3a] h-screen snap-start flex justify-center items-center text-center">
+    <main>
+      {/* Introduction Section */}
+      <section className="introduction-section h-screen bg-gray-800 flex justify-center items-center text-center">
         <Introduction />
       </section>
       
-      <section className="section bg-[#2b2b2b] h-screen snap-start text-white text-center p-10">
+      {/* Timeline Section */}
+      <section className="timeline-section h-screen bg-gray-900 text-white text-center p-10">
         <h1 className="text-6xl font-bold mb-10">Mi experiencia</h1>
         <TimeLine />
       </section>
