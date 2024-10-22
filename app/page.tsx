@@ -10,20 +10,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   useEffect(() => {
-    // GSAP ScrollTrigger animation between sections
+    // Animación del título y del TimeLine
     gsap.fromTo(
-      ".timeline-section",
-      { opacity: 0, y: 100 }, // Start values
+      ".timeline-title",
+      { opacity: 0, x: -100 }, // Start state
       { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1.5, 
-        ease: "power3.out", 
+        opacity: 1, x: 0, duration: 1.5, ease: "power3.out", 
         scrollTrigger: {
-          trigger: ".timeline-section", // Element that triggers the animation
-          start: "top 80%", // Start when the top of the timeline section hits 80% of the viewport
-          end: "bottom 20%", // When to end the animation
-          scrub: true, // Smooth animation progress as the user scrolls
+          trigger: ".timeline-section",
+          start: "top 80%",
+          end: "bottom top",
+          scrub: true,
+          toggleActions: "play none none none",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".timeline-content",
+      { opacity: 0, x: 100 }, // Start state
+      { 
+        opacity: 1, x: 0, duration: 1.5, ease: "power3.out", 
+        scrollTrigger: {
+          trigger: ".timeline-section",
+          start: "top 80%",
+          end: "bottom top",
+          scrub: true,
+          toggleActions: "play none none none",
         },
       }
     );
@@ -37,10 +50,28 @@ export default function Home() {
       </section>
       
       {/* Timeline Section */}
-      <section className="timeline-section h-screen bg-gray-900 text-white text-center p-10">
-        <h1 className="text-6xl font-bold mb-10">Mi experiencia</h1>
-        <TimeLine />
+      <section className="timeline-section h-screen bg-gray-900 text-white flex justify-center items-center -space-x-96">
+        {/* Left side for the title */}
+        <div className="w-[45%] flex justify-end items-center">
+          <h1 className="timeline-title text-8xl font-bold transform -rotate-90 whitespace-nowrap">
+            [01] Mi experiencia
+          </h1>
+        </div>
+
+        {/* Right side for the timeline content */}
+        <div className="timeline-content w-[45%] mt-20">
+          <TimeLine />
+        </div>
+        <div className="absolute inset-0 pointer-events-none bg-noise opacity-70"></div>
       </section>
+
+      <style jsx>{`
+        .bg-noise {
+          background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+          background-size: 4px 4px;
+        }
+      `}</style>
+
     </main>
   );
 }
