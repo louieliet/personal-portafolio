@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <main>
       {/* Introduction Section */}
-      <section className="introduction-section h-screen bg-gray-800 flex justify-center items-center text-center">
+      <section id="intro" className="introduction-section h-screen custom-bg flex justify-center items-center text-center">
         <Introduction />
       </section>
       
@@ -59,19 +59,11 @@ export default function Home() {
         </div>
 
         {/* Right side for the timeline content */}
-        <div className="timeline-content w-[45%] mt-20">
+        <div className="timeline-content w-[45%] mt-40">
           <TimeLine />
         </div>
         <div className="absolute inset-0 pointer-events-none bg-noise opacity-70"></div>
       </section>
-
-      <style jsx>{`
-        .bg-noise {
-          background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-          background-size: 4px 4px;
-        }
-      `}</style>
-
     </main>
   );
 }
