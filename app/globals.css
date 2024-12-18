@@ -35,7 +35,7 @@ body {
 
 .timeline-bg {
   position: relative;
-  background: rgb(18, 27, 48);
+  background: #121b30;
 }
 
 .timeline-bg::before {
