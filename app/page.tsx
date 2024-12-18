@@ -4,6 +4,7 @@ import Introduction from "@/components/introduction";
 import TimeLine from "@/components/timeline";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 // Register ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
@@ -45,16 +46,37 @@ export default function Home() {
   return (
     <main>
       {/* Introduction Section */}
-      <section id="intro" className="introduction-section h-screen custom-bg flex justify-center items-center text-center">
+      <section id="intro" className="introduction-section min-h-full flex justify-center items-center text-center intro-bg">
         <Introduction />
       </section>
+
+      {/* About Me Section */}
+      <section id="about" className="about-section min-h-full flex justify-center items-center text-white">
+        <div className="about-content w-[80%]">
+          <h1 className="about-title text-8xl font-bold">[01] Sobre mí</h1>
+          <p className="about-text text-2xl mt-10">
+            Soy un desarrollador web con más de 5 años de experiencia en el desarrollo de aplicaciones web y móviles. 
+            Me apasiona la programación y el diseño web, y siempre estoy buscando nuevas tecnologías para mejorar mis habilidades.
+          </p>
+        </div>
+        <div className="absolute inset-0 pointer-events-none bg-noise opacity-70"></div>
+      </section>
+
       
       {/* Timeline Section */}
-      <section className="timeline-section h-screen bg-gray-900 text-white flex justify-center items-center -space-x-96">
+      <section className="timeline-section min-h-full text-white flex justify-center items-center -space-x-96 timeline-bg">
         {/* Left side for the title */}
         <div className="w-[45%] flex justify-end items-center">
-          <h1 className="timeline-title text-8xl font-bold transform -rotate-90 whitespace-nowrap">
-            [01] Mi experiencia
+          <Image 
+            src="/images/arrow.svg" 
+            alt="Arrow" 
+            width={100} 
+            height={100} 
+            layout="intrinsic" 
+            className="transform rotate-90"
+          />
+          <h1 className="timeline-title text-8xl font-bold transform -rotate-90 whitespace-nowrap mt-24">
+            [02] Mi experiencia
           </h1>
         </div>
 
