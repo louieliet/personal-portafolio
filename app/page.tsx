@@ -1,12 +1,15 @@
 "use client";
 import { useEffect } from "react";
-import Introduction from "@/components/introduction";
-import TimeLine from "@/components/timeline";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
-// Register ScrollTrigger
+import Header from "@/components/header";
+import Introduction from "@/components/introduction";
+import AboutMe from "@/components/aboutme";
+import TimeLine from "@/components/timeline";
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -46,25 +49,22 @@ export default function Home() {
   return (
     <main>
       {/* Introduction Section */}
-      <section id="intro" className="introduction-section min-h-full flex justify-center items-center text-center intro-bg">
+      <section id="intro" className="introduction-section intro-bg">
+        <Header />
         <Introduction />
       </section>
 
       {/* About Me Section */}
-      <section id="about" className="about-section min-h-full flex justify-center items-center text-white">
-        <div className="about-content w-[80%]">
-          <h1 className="about-title text-8xl font-bold">[01] Sobre mí</h1>
-          <p className="about-text text-2xl mt-10">
-            Soy un desarrollador web con más de 5 años de experiencia en el desarrollo de aplicaciones web y móviles. 
-            Me apasiona la programación y el diseño web, y siempre estoy buscando nuevas tecnologías para mejorar mis habilidades.
-          </p>
+      <section id="aboutme" className="aboutme-section aboutme-bg">
+        <Header textcolor="white"/>
+        <div className="w-full px-12 py-5">
+          <AboutMe />
         </div>
-        <div className="absolute inset-0 pointer-events-none bg-noise opacity-70"></div>
       </section>
 
       
       {/* Timeline Section */}
-      <section className="timeline-section min-h-full text-white flex justify-center items-center -space-x-96 timeline-bg">
+      <section className="timeline-section min-h-full text-white flex justify-center items-center -space-x-96 aboutme-bg">
         {/* Left side for the title */}
         <div className="w-[45%] flex justify-end items-center">
           <Image 

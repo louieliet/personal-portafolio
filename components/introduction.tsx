@@ -15,7 +15,7 @@ const Introduction = () => {
     }, []);
 
     return (
-        <div className='flex flex-col md:flex-row items-center justify-center min-h-screen w-full md:gap-20 gap-10 px-5' data-aos="fade">
+        <div className='flex flex-col md:flex-row items-center justify-center min-h-screen w-full md:gap-20 gap-10 px-5 pb-24' data-aos="fade">
             {/* Imagen circular, ajustada para pantallas pequeñas y grandes */}
             <div className='w-[250px] h-[250px] md:w-[400px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden z-40'>
                 <Image 
