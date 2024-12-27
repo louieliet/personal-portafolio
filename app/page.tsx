@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       {/* Introduction Section */}
       <section id="intro" className="introduction-section intro-bg min-h-screen">
         <Header />
@@ -19,7 +19,7 @@ export default function Home() {
       </section>
 
       {/* About Me Section */}
-      <section id="aboutme" className="aboutme-section aboutme-bg min-h-screen">
+      <section id="aboutme" className="aboutme-section aboutme-bg min-h-screen -mt-12">
         <Header textcolor="white" />
         <div className="w-full px-12 py-5">
           <AboutMe />
@@ -27,7 +27,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="timeline-section experience-bg min-h-screen">
+      <section id="experience" className="experience-section experience-bg min-h-screen -mt-12">
         <Header textcolor="white" />
         <Experience />
       </section>
