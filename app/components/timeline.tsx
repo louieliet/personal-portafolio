@@ -1,18 +1,8 @@
 "use client";
 import { dataAboutPage } from "@/data";
-import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 const TimeLine = () => {
-    useEffect(() => {
-        AOS.init({
-        duration: 1000,
-        easing: "ease-in-out",
-        once: true,
-        });
-    }, []);
-
     return (
         <div className="flex flex-col justify-center  divide-slate-200">
             <div className="w-full max-w-3xl mx-auto md:pb-40 md:pt-10" >

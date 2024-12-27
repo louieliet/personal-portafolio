@@ -2,8 +2,8 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import AboutWeb from "@/app/pages/AboutWeb"
-import AboutMobile from "@/app/pages/AboutMobile";
+import AboutWeb from "@/app/pages/About/AboutWeb"
+import AboutMobile from "@/app/pages/About/AboutMobile";
 
 const AboutMe = () => {
     useEffect(() => {
