@@ -8,20 +8,34 @@ const AboutMobile = () => {
   useEffect(() => {
     gsap.fromTo(
       ".habitus-video",
-      { opacity: 0, x: -300 }, 
+      { opacity: 0, x: -600 }, 
       {
         opacity: 1,
         x: 0,
-        duration: 3,
+        duration: 1.5,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".about-mobile",
-          start: "top 95%",
-          end: "bottom 5%",
+          start: "top 90%",
+          end: "bottom 30%",
           scrub: true,
           toggleActions: "play none none none",
         },
       },
+    );
+    gsap.fromTo(
+      ".habitus-content",
+      { opacity: 0 }, 
+      {
+        opacity: 1, // Estado final: Opacidad 1
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".about-mobile", // Elemento que activa la animación
+          start: "top 20%", // Inicia cuando el top del .about-mobile alcanza el 90% del viewport
+          scrub: true, // Anima en función del desplazamiento del scroll
+          toggleActions: "play none none none", // Control de acciones
+        },
+      }
     );
   }, []);
 
@@ -67,7 +81,7 @@ const AboutMobile = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-          <p className="text-white font-regular text-lg -ml-96 my-auto w-[60%]">
+          <p className="habitus-content text-white font-regular text-lg -ml-96 my-auto w-[60%]">
             Habitus es una app hecha 100% con React Native junto con FireBase
             que te ayuda a crear hábitos saludables y a llevar un control de tus
             actividades diarias. Estuve a cargo de toda la programación y parte
