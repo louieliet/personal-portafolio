@@ -3,7 +3,7 @@ import IconsWeb from "@/app/assets/tecsweb.svg";
 
 const AboutWeb = () => {
   return (
-    <div className="w-full px-4">
+    <div className="w-full px-4" data-aos="fade">
       <p className="text-white font-bold text-4xl pt-10 pb-5">Desarrollo web</p>
       <p className="text-white text-lg mr-32">
         Construyo experiencias digitales intuitivas y eficientes que combinan

@@ -40,7 +40,7 @@ const AboutMobile = () => {
   }, []);
 
   return (
-    <div className="w-full px-4">
+    <div className="w-full px-4" data-aos="fade">
       <p className="text-white font-bold text-4xl pt-10 pb-5">
         Desarrollo móvil
       </p>
