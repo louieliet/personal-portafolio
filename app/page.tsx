@@ -4,10 +4,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 
-import Header from "@/components/header";
-import Introduction from "@/components/introduction";
-import AboutMe from "@/components/aboutme";
-import TimeLine from "@/components/timeline";
+import Header from "@/app/components/header";
+import Introduction from "@/app/components/introduction";
+import AboutMe from "@/app/components/aboutme";
+import TimeLine from "@/app/components/timeline";
 
 
 gsap.registerPlugin(ScrollTrigger);
