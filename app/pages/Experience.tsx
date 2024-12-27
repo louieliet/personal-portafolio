@@ -6,16 +6,33 @@ const Experience = () => {
   useEffect(() => {
     gsap.fromTo(
       ".timeline-title",
-      { opacity: 0, x: -100 }, // Start state
+      { opacity: 0, x: -300 }, 
       {
         opacity: 1,
         x: 0,
-        duration: 1.5,
+        duration: 3,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".timeline-section",
-          start: "top 80%",
-          end: "bottom top",
+          start: "top 95%",
+          end: "bottom 5%",
+          scrub: true,
+          toggleActions: "play none none none",
+        },
+      },
+    );
+    gsap.fromTo(
+      ".timeline-content",
+      { opacity: 0, x: 300 }, 
+      {
+        opacity: 1,
+        x: 0,
+        duration: 3,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".timeline-section",
+          start: "top 95%",
+          end: "bottom 5%",
           scrub: true,
           toggleActions: "play none none none",
         },
