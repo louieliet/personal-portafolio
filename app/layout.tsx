@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 
-const urbanist = Urbanist({subsets: ["latin"]});
-
+const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Emi's portafolio 🌱",
-  description: "Personal portafolio of Emiliano Montes", 
+  description: "Personal portafolio of Emiliano Montes",
 };
 
 export default function RootLayout({
@@ -17,11 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${urbanist.className} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${urbanist.className} antialiased`}>{children}</body>
     </html>
   );
 }

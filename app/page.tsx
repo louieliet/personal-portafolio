@@ -20,12 +20,12 @@ export default function Home() {
 
       {/* About Me Section */}
       <section id="aboutme" className="aboutme-section aboutme-bg">
-        <Header textcolor="white"/>
+        <Header textcolor="white" />
         <div className="w-full px-12 py-5">
           <AboutMe />
         </div>
       </section>
-      
+
       {/* Experience Section */}
       <section className="timeline-section aboutme-bg">
         <Experience />
