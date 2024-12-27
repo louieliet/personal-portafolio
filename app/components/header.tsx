@@ -1,27 +1,50 @@
-import Link from "next/link";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 interface HeaderProps {
   textcolor?: string;
 }
 
+gsap.registerPlugin(ScrollToPlugin);
+
 const Header: React.FC<HeaderProps> = ({ textcolor = "black" }) => {
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      gsap.to(window, {
+        scrollTo: { y: section.offsetTop, offsetY: 0 },
+        duration: 1,
+        ease: "power3.out",
+      });
+    }
+  };
+
   return (
     <div className="flex flex-row justify-between items-center px-10 py-5 w-full">
-      <p className="font-bold" style={{ color: textcolor }}>
+      <button className="font-bold" onClick={() => scrollToSection("intro")} style={{ color: textcolor }}>
         EMG
-      </p>
+      </button>
       <div className="flex flex-row gap-5">
-        <Link href="/about" style={{ color: textcolor }}>
+        <button
+          onClick={() => scrollToSection("aboutme")}
+          style={{ color: textcolor }}
+        >
           ¿Qué hago?
-        </Link>
+        </button>
         <hr className="border border-gray-600 h-6" />
-        <Link href="/projects" style={{ color: textcolor }}>
+        <button
+          onClick={() => scrollToSection("experience")}
+          style={{ color: textcolor }}
+        >
           Experiencia
-        </Link>
+        </button>
         <hr className="border border-gray-600 h-6" />
-        <Link href="/contact" style={{ color: textcolor }}>
+        <button
+          onClick={() => scrollToSection("contact")}
+          style={{ color: textcolor }}
+        >
           Contacto
-        </Link>
+        </button>
       </div>
     </div>
   );

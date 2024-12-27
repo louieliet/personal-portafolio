@@ -13,13 +13,13 @@ export default function Home() {
   return (
     <main>
       {/* Introduction Section */}
-      <section id="intro" className="introduction-section intro-bg">
+      <section id="intro" className="introduction-section intro-bg min-h-screen">
         <Header />
         <Introduction />
       </section>
 
       {/* About Me Section */}
-      <section id="aboutme" className="aboutme-section aboutme-bg">
+      <section id="aboutme" className="aboutme-section aboutme-bg min-h-screen">
         <Header textcolor="white" />
         <div className="w-full px-12 py-5">
           <AboutMe />
@@ -27,7 +27,8 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section className="timeline-section aboutme-bg">
+      <section id="experience" className="timeline-section aboutme-bg min-h-screen">
+        <Header textcolor="white" />
         <Experience />
       </section>
     </main>
