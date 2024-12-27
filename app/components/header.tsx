@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ textcolor = "black" }) => {
 
   useEffect(() => {
     // Configura ScrollTrigger para cada sección
-    const sections = ["intro", "aboutme", "experience", "contact"];
+    const sections = ["intro", "aboutme", "experience"];
     sections.forEach((id) => {
       ScrollTrigger.create({
         trigger: `#${id}`,
@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ textcolor = "black" }) => {
     if (section) {
       gsap.to(window, {
         scrollTo: { y: section.offsetTop, offsetY: 0 },
-        duration: 1,
+        duration: 2,
         ease: "power3.out",
       });
     }
