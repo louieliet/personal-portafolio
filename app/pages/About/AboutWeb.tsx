@@ -21,8 +21,8 @@ const AboutWeb = () => {
 
       <div className="flex flex-col w-full gap-10">
         {/* Página de HUS */}
-        <div className="w-full flex flex-row">
-          <div className="border-4 border-gray-300 rounded-lg overflow-hidden bg-white w-[70%]">
+        <div className="w-full flex flex-col">
+          <div className="border-4 border-gray-300 rounded-lg overflow-hidden bg-white w-full">
             <iframe
               src="https://hus-demo.vercel.app/"
               title="YouTube video"
@@ -34,21 +34,15 @@ const AboutWeb = () => {
               style={{ border: "none" }}
             />
           </div>
-          <p className="text-white font-regular text-lg mx-auto my-auto w-[20%]">
+          <p className="text-white font-regular text-center text-lg mx-auto my-10 w-[80%]">
             Página de Hus, realizada con NextJS, React + TypeScript y Tailwind
             CSS, donde me encargué principalmente del frontend, realizando
             componentes reutilizables y optimizando la velocidad de carga.
           </p>
         </div>
         {/* Página de Ragabe */}
-        <div className="w-full flex flex-row">
-          <p className="text-white font-regular text-lg mx-auto my-auto w-[20%]">
-            Página para Ragabe, realizada con NextJS, React + TypeScript y
-            Tailwind CSS, donde estuve totalmente a cargo del frontend,
-            realizando componentes reutilizables, optimizando la velocidad de
-            carga y asegurando la compatibilidad con dispositivos móviles.
-          </p>
-          <div className="border-4 border-gray-300 rounded-lg overflow-hidden bg-white w-[70%]">
+        <div className="w-full flex flex-col">
+          <div className="border-4 border-gray-300 rounded-lg overflow-hidden bg-white w-full">
             <iframe
               src="https://dev.ragabe.git.chainsol.io/"
               title="YouTube video"
@@ -60,6 +54,12 @@ const AboutWeb = () => {
               style={{ border: "none" }}
             />
           </div>
+          <p className="text-white font-regular text-center text-lg mx-auto mt-10 w-[80%]">
+            Página para Ragabe, realizada con NextJS, React + TypeScript y
+            Tailwind CSS, donde estuve totalmente a cargo del frontend,
+            realizando componentes reutilizables, optimizando la velocidad de
+            carga y asegurando la compatibilidad con dispositivos móviles.
+          </p>
         </div>
       </div>
     </div>

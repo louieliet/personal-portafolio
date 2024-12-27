@@ -18,7 +18,7 @@ const AboutMe = () => {
         </div>
 
         {/* Desarrollo móvil */}
-        <hr className="border-1 border-gray-100 mt-40 mb-14 w-[90%] mx-auto" />
+        <hr className="border-1 border-gray-100 mt-24 mb-14 w-[90%] mx-auto" />
         <div className="about-mobile">
           <AboutMobile />
         </div>
