@@ -1,7 +1,30 @@
 import Image from "next/image";
 import IconsMobile from "@/app/assets/tecsmobile.svg";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+
 
 const AboutMobile = () => {
+  useEffect(() => {
+    gsap.fromTo(
+      ".habitus-video",
+      { opacity: 0, x: -300 }, 
+      {
+        opacity: 1,
+        x: 0,
+        duration: 3,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".about-mobile",
+          start: "top 95%",
+          end: "bottom 5%",
+          scrub: true,
+          toggleActions: "play none none none",
+        },
+      },
+    );
+  }, []);
+
   return (
     <div className="w-full px-4">
       <p className="text-white font-bold text-4xl pt-10 pb-5">
@@ -31,7 +54,7 @@ const AboutMobile = () => {
       <div className="flex flex-col w-full gap-10">
         {/* HabitusApp */}
         <div className="w-full flex flex-row">
-          <div className="w-[150%] relative -ml-96">
+          <div className="habitus-video w-[150%] relative -ml-96">
             {/* Video sin controles */}
             <video
               autoPlay

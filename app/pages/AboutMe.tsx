@@ -27,7 +27,9 @@ const AboutMe = () => {
 
         {/* Desarrollo móvil */}
         <hr className="border-1 border-gray-100 mt-40 mb-14 w-[90%] mx-auto" />
-        <AboutMobile />
+        <div className="about-mobile">
+          <AboutMobile />
+        </div>
       </div>
     </div>
   );
