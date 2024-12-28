@@ -13,8 +13,8 @@ const Experience = () => {
         duration: 3,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".timeline-section",
-          start: "top 95%",
+          trigger: ".experience-section",
+          start: "top 90%",
           end: "bottom 75%",
           scrub: true,
           toggleActions: "play none none none",
@@ -30,7 +30,7 @@ const Experience = () => {
         duration: 3,
         ease: "power3.out",
         scrollTrigger: {
-          trigger: ".timeline-section",
+          trigger: ".experience-section",
           start: "top 95%",
           end: "bottom 75%",
           scrub: true,

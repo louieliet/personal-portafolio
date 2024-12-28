@@ -37,14 +37,14 @@ a,
   z-index: 0; /* Envía el ruido al fondo detrás del contenido */
 }
 
-.aboutme-section {
+.aboutme-bg {
   position: relative; /* Necesario para que el pseudo-elemento funcione */
   background: #121b30;
   border-top-left-radius: 50px;  
   border-top-right-radius: 50px; 
 }
 
-.aboutme-section::before {
+.aboutme-bg::before {
   content: "";
   position: absolute;
   top: 0; /* Cambia de `top: 20;` a `top: 0` */
@@ -57,14 +57,14 @@ a,
   z-index: 0; /* Envía el ruido al fondo detrás del contenido */
 }
 
-.experience-section {
+.experience-bg {
   position: relative; /* Necesario para que el pseudo-elemento funcione */
   background: #0F1729;
   border-top-left-radius: 50px;  
   border-top-right-radius: 50px; 
 }
 
-.experience-section::before{
+.experience-bg::before{
   content: "";
   position: absolute;
   top: 0; /* Cambia de `top: 20;` a `top: 0` */
