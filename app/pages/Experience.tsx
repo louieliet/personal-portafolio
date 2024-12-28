@@ -43,9 +43,21 @@ const Experience = () => {
     <div className="flex text-white justify-center items-center -space-x-96 -mt-6">
       {/* Left side for the title */}
       <div className="w-[45%] flex justify-end items-center">
-        <h1 className="timeline-title text-8xl font-bold transform -rotate-90 whitespace-nowrap ">
+        <h1 className="timeline-title text-8xl font-bold transform -rotate-90 whitespace-nowrap z-10">
           [02] Mi experiencia
         </h1>
+        <div className="absolute top-0 -z-2 opacity-50">
+          <video
+              autoPlay
+              loop
+              muted
+              className="w-full h-auto pointer-events-none"
+              style={{ background: "transparent", width: "65%" }}
+            >
+              <source src="/videos/expvid.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+        </div>
       </div>
 
       {/* Right side for the timeline content */}
