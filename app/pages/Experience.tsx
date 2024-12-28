@@ -40,7 +40,7 @@ const Experience = () => {
     );
   }, []);
   return (
-    <div className="flex text-white justify-center items-center -space-x-96 mt-2">
+    <div className="flex text-white justify-center items-center -space-x-96 -mt-6">
       {/* Left side for the title */}
       <div className="w-[45%] flex justify-end items-center">
         <h1 className="timeline-title text-8xl font-bold transform -rotate-90 whitespace-nowrap ">
