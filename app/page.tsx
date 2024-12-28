@@ -7,6 +7,7 @@ import Introduction from "@/app/pages/Introduction";
 import AboutMe from "@/app/pages/AboutMe";
 import Experience from "@/app/pages/Experience";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
         <Header textcolor="white" />
         <Experience />
       </section>
+
     </main>
   );
 }

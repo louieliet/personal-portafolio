@@ -77,6 +77,24 @@ a,
   z-index: 0; /* Envía el ruido al fondo detrás del contenido */
 }
 
+.activities-bg {
+  position: relative; 
+  background: #0F1729;
+}
+
+.activities-bg::before{
+  content: "";
+  position: absolute;
+  top: 0; /* Cambia de `top: 20;` a `top: 0` */
+  left: 0;
+  width: 100%; /* Asegura que cubra todo el ancho */
+  height: 100%; /* Asegura que cubra toda la altura */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='20' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-size: cover;
+  opacity: 0.1;
+  z-index: 0; /* Envía el ruido al fondo detrás del contenido */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

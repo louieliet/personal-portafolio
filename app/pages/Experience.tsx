@@ -41,7 +41,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="flex text-white justify-center items-center -mt-6">
+    <div className="flex text-white justify-center items-center">
       {/* Left side for the title */}
       <div className="w-[45%] relative h-screen flex justify-center items-center overflow-hidden">
         {/* Video Background */}
